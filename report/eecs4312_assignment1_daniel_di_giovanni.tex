@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+
+% Math package
+% leqno means numbered equations are displayed with the numbers to the left of
+% the equations instead of to the right ("left equation numbers")
+\usepackage[leqno]{amsmath}
+
+% Geometry package for setting margins
+\usepackage{geometry}
+% Set margins
+\geometry{margin=1in}
+
+% Package for sans-serif font
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Package for adding space between paragraphs
+\usepackage{parskip}
+
+% Adding "Page {number} of {total}" in footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\fancyfoot[C]{Page \thepage\ of {\hypersetup{linkcolor=black}\pageref{LastPage}}}
+\pagestyle{fancy}
+% Remove horizontal line from header
+\renewcommand{\headrulewidth}{0pt}
+
+% Floating images
+\usepackage{float}
+
+% Subfigure images
+\usepackage{subcaption}
+
+% Making the "Figure #" bold in figures
+\usepackage[labelfont=bf]{caption}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black
+}
+
+% Referencing sections and include their name in the reference
+\usepackage{nameref}
+
+% Fill table of contents lines with dots
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Appendix package
+\usepackage[title, titletoc]{appendix}
+
+% Package for including other PDFs in this report
+\usepackage{pdfpages}
+
+% Bibliography
+% \usepackage{natbib}
+% \bibliographystyle{ieeetr}
+% \bibliography{references}
+\usepackage{tocbibind}
+\begin{document}
+
+    \newgeometry{left=1.3in, right=1.3in}
+    \newlength\myheight
+    \newlength\mydepth
+    \settototalheight\myheight{Xygp}
+    \settodepth\mydepth{Xygp}
+    \setlength\fboxsep{0pt}
+    \setlength{\fboxrule}{0pt}
+    \begin{titlepage}
+        \Huge\textbf{EECS 4312 Software Requirements}
+
+        \Large\textbf{Assignment 1}
+
+        \Large Daniel Di Giovanni --- 218204818
+
+        \large \today
+
+        \vfill
+
+        \normalsize
+        \begin{center}
+            \rule{\textwidth}{1pt}\\
+        \end{center}
+
+        \textbf{My signature below attests that this submission is my original work:}
+            % Make sure this line is justified
+            \unskip\parfillskip 0pt \par
+
+        \small
+        Following professional engineering practice, I bear the burden of
+            proof for original work. I have read the
+            \href{https://www.yorku.ca/secretariat/policies/policies/academic-honesty-senate-policy-on/}{Senate Policy on Academic Integrity posted on the York University website}
+            and confirm that this work is in accordance with the Policy.
+        \vspace*{0.5cm}
+        \noindent
+
+        \begin{center}
+            \begin{tabular}{ll}
+                \raisebox{-30pt}{\fbox{\includegraphics[height=30pt]{images/signature.jpeg}}} & \raisebox{-30pt}{\fbox{\today}}\\
+                \makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+                \textbf{Signature} & \textbf{Date}\\
+            \end{tabular}
+        \end{center}
+    \end{titlepage}
+
+    \setlength\fboxsep{5pt}
+    \setlength{\fboxrule}{1pt}
+    \restoregeometry
+
+    \markboth{}{}
+    {\hypersetup{linkcolor=black}
+        \tableofcontents
+        \thispagestyle{fancy}
+    }
+    \markboth{}{}
+
+    \pagebreak
+
+    \include{task1}
+
+    \bibliographystyle{ieeetr}
+    \bibliography{references}
+
+    \pagebreak
+
+    \part*{Appendices}
+    \addcontentsline{toc}{part}{Appendices}
+        \begin{appendices}
+            The following appendices contain the code that was referenced
+                throughout this report.
+            Appendix \ref{sec:data_preprocessing} contains the Jupyter
+                Notebook for the data preprocessing of the WhatsApp Messenger
+                reviews.
+
+            \includepdf[
+                %% Include all pages of the PDF
+                pages=-,
+                %% make this page have the usual page style
+                %% (you can change it to plain etc). By default pdfpages
+                %% sets the pagecommand to \pagestyle{empty}
+                pagecommand={\pagestyle{headings}},  
+                %% Add a "section" entry to the ToC with the heading
+                %% "Quilling Shapes" and the label "sec:shapes"
+                addtotoc={1,section,1,Jupyter Notebook: WhatsApp Messenger Reviews Preprocessing,sec:data_preprocessing}]
+            %% The pdf file itself
+            {data_preprocessing.pdf}
+        \end{appendices}
+
+\end{document}

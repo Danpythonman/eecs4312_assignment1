@@ -1,0 +1,27 @@
+# Ignore everything
+*
+
+# Unignore gitignore
+!.gitignore
+
+# Unignore requirements.txt
+!requirements.txt
+
+# Unignore Jupyter notebook to PDF converting script
+!notebook_to_pdf.sh
+
+# Unignore notebooks
+!notebooks
+!notebooks/data_preprocessing.ipynb
+
+# Unignore Python utils
+!notebooks/utils
+!notebooks/utils/review_utils.py
+
+# Unignore report
+!report
+!report/eecs4312_assignment1_daniel_di_giovanni.tex
+!report/images
+!report/images/signature.jpeg
+!report/task1.tex
+!report/references.bib
