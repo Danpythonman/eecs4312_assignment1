@@ -58,7 +58,13 @@
 % \usepackage{natbib}
 % \bibliographystyle{ieeetr}
 % \bibliography{references}
-\usepackage{tocbibind}
+
+\usepackage{etoolbox} % Required for patching commands
+% Patch \bibliography to remove the "References" section title
+\makeatletter
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\makeatother
+
 \begin{document}
 
     \newgeometry{left=1.3in, right=1.3in}
@@ -120,8 +126,13 @@
 
     \include{task1}
 
-    \bibliographystyle{ieeetr}
-    \bibliography{references}
+    \part*{References}
+    \addcontentsline{toc}{part}{References}
+    \begingroup
+        \def\section*#1{}
+        \bibliographystyle{IEEEtran}
+        \bibliography{references}
+    \endgroup
 
     \pagebreak
 
