@@ -13,6 +13,7 @@
 # Unignore notebooks
 !notebooks
 !notebooks/data_preprocessing.ipynb
+!notebooks/topic_modelling.ipynb
 
 # Unignore Python utils
 !notebooks/utils
