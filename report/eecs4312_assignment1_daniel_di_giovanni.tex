@@ -65,6 +65,10 @@
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \makeatother
 
+% User requirement counter
+\newcounter{mycounter}
+\newcommand\showmycounter{\addtocounter{mycounter}{1}\ifnum\value{mycounter}<10 0\fi\themycounter}
+
 \begin{document}
 
     \newgeometry{left=1.3in, right=1.3in}
@@ -143,22 +147,16 @@
         \begin{appendices}
             The following appendices contain the code that was referenced
                 throughout this report.
-            Appendix \ref{sec:data_preprocessing} contains the Jupyter
+            Appendix \ref{sec:reviews_processing_notebook} contains the Jupyter
                 Notebook for the data preprocessing of the WhatsApp Messenger
                 reviews.
 
             \includepdf[
-                %% Include all pages of the PDF
                 pages=-,
-                %% make this page have the usual page style
-                %% (you can change it to plain etc). By default pdfpages
-                %% sets the pagecommand to \pagestyle{empty}
-                pagecommand={\pagestyle{headings}},  
-                %% Add a "section" entry to the ToC with the heading
-                %% "Quilling Shapes" and the label "sec:shapes"
-                addtotoc={1,section,1,Jupyter Notebook: WhatsApp Messenger Reviews Preprocessing,sec:data_preprocessing}]
-            %% The pdf file itself
-            {data_preprocessing.pdf}
+                width=\textwidth,
+                pagecommand={\pagestyle{headings}},
+                addtotoc={1,section,1,Jupyter Notebook: GrandPad Reviews Processing,sec:reviews_processing_notebook}]
+            {GrandPad Reviews Preprocessing.pdf}
         \end{appendices}
 
 \end{document}

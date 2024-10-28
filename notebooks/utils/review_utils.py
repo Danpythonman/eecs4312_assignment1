@@ -93,9 +93,12 @@ def find_reviews_by_keyword_list(df: pd.DataFrame, keyword_list: List[str]) -> N
             else:
                 topic_total_map[topic] = 1
 
-            date = datetime.strptime(review['at'], '%Y-%m-%d %H:%M:%S')
+            if isinstance(review['at'], str):
+                date = datetime.strptime(review['at'], '%Y-%m-%d %H:%M:%S')
+            else:
+                date = review['at']
 
-            print(f"TOPIC {topic} [{date.strftime('%Y-%m-%d')}]: {review['content']}")
+            print(f"TOPIC {topic}, ROW {i} [{date.strftime('%Y-%m-%d')}]: {review['content']}")
 
     print('===== Totals from each topic =====')
 

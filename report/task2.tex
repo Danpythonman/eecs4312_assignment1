@@ -5,25 +5,23 @@ The identification of user, software, and system requirements were scraped and
     analyzed from the Google Play Store, both from the app's description and its
     reviews.
 
-\section*{Analyzing WhatsApp Messenger's Google Play Reviews}
-\addcontentsline{toc}{section}{Analyzing WhatsApp Messenger's Google Play Reviews}
+\section*{Analyzing GrandPad's Google Play Reviews}
+\addcontentsline{toc}{section}{Analyzing GrandPad's Google Play Reviews}
 
-The following explanation of the analysis of WhatsApp Messenger's reviews is a
-    summary of the Jupyter Notebook in Appendix \ref{sec:data_preprocessing}.
+The following explanation of the analysis of GrandPad's reviews is a summary of
+    the Jupyter Notebook in Appendix \ref{sec:reviews_processing_notebook}.
 
 Using the
     \href{https://pypi.org/project/google-play-scraper/}{google-play-scraper}
     Python library, reviews were scraped from the Google Play Store.
-Initially, 328,500 reviews were scraped, most of which were under 10 words.
+Initially, 1,823 reviews were scraped, many of which were under 10 words.
 This is shown in the histogram below.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{data_preprocessing_files/data_preprocessing_9_0.png}
+    \includegraphics[width=0.75\textwidth]{images/word_length_distribution.png}
 \end{figure}
 To reduce the amount of data to analyze, all reviews under 10 words were
     removed.
-Additional filters were applied, like removing non-English reviews with the
-    \href{https://pypi.org/project/langdetect/}{langdetect} Python library.
 The reviews were then split by their rating (5 stars: positive, 2-4 stars:
     mixed, 1 star: negative) and run through a
     \href
@@ -35,77 +33,76 @@ The reviews were then split by their rating (5 stars: positive, 2-4 stars:
 \addcontentsline{toc}{subsection}{User Requirements from Negative Reviews}
 
 The analysis of negative reviews led to some recurring topics, which included
-    banning of accounts without warning,
-    lack of support if a user's account was hacked,
-    and the prevalence of scam messages.
+    lack of professional support,
+    intrusive app behavior,
+    lack of personalization functionality,
+    poor quality of video and voice calls,
+    and frustrating notification experience.
 
 \begin{description}
-    \item[\textbf{USER-01}]
-        The user should not be banned without first receiving a warning for a
-            specific behavior.
-    \item[\textbf{USER-02}]
-        If a user's account is banned, the user should receive a thorough and
-            transparent explanation of why the ban happened.
-    \item[\textbf{USER-03}]
-        The user needs to have protection against people hacking into their
-            account.
-    \item[\textbf{USER-04}]
-        The user needs to have access to support in the event of someone hacking
-            into their account.
-    \item[\textbf{USER-05}]
-        The user needs to have the option to block all messages from unknown
-            accounts to prevent scam attempts.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I need to have access to
+            support staff during work hours to help configure the network.
+    \item[\textbf{USER-\showmycounter}]
+        As a senior user of GrandPad, I need to have access to support staff
+            during work hours to help troubleshoot problems with the GrandPad
+            tablet.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I don't want the app to override
+            Do Not Disturb mode on my phone.
+    \item[\textbf{USER-\showmycounter}]
+        As an administrator of a GrandPad network, I want to be able to
+            customize the elderly user's GrandPad tablet to suit their
+            proficiency and comfort levels with technology.
+    \item[\textbf{USER-\showmycounter}]
+        As an elderly user of the GrandPad tablet who is moderately comfortable
+            with technology, I want to be able to customize the my GrandPad
+            tablet to add or remove features.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to video call with high
+            enough quality to see and hear my loved ones.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to voice call with high
+            enough quality to hear my loved ones.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to be able to receive
+            notifications when a member of the network posts, comments, or
+            reacts to a post, or calls me.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to be able to clear all
+            notifications at once, without having to individually clear each
+            one.
 \end{description}
 
 \subsection*{User Requirements from Mixed Reviews}
 \addcontentsline{toc}{subsection}{User Requirements from Mixed Reviews}
 
 When analyzing the mixed reviews, some recurring topics were
-    backups of chat history,
-    and multi-factor authentication/verification steps.
+    connecting multiple GrandPad tablets to a single network,
+    being part of multiple networks,
+    editing posts and comments,
+    vague error messages,
+    posting multiple files at once,
+    and sending message to or calling specific people in a network.
 
 \begin{description}
-    \item[\textbf{USER-01}]
-        The user needs to be able to choose which chats to backup.
-    \item[\textbf{USER-02}]
-        Upon a backup failure, the user needs to be informed why the backup
-            failed so that they can take action to fix the issue.
-    \item[\textbf{USER-03}]
-        The user needs to reload chats from a backup file.
-    \item[\textbf{USER-04}]
-        The user needs to be able to enable multi-factor authentication.
-    \item[\textbf{USER-05}]
-        Upon a failure with multi-factor authentication, the user needs to be
-            informed why the verification failed.
+    \item[\textbf{USER-\showmycounter}]
+        As an administrator of a GrandPad family network, I need to be able to
+            add multiple users with GrandPad tablets to a single member, to
+            accommodate multiple elderly family members.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to be able to easily join and
+            switch between multiple GrandPad family networks to be part of
+            multiple groups of people.
 \end{description}
 
 \subsection*{User Requirements from Positive Reviews}
 \addcontentsline{toc}{subsection}{User Requirements from Positive Reviews}
 
 When analyzing positive reviews, prominent topics that were found include
-    video and voice calling,
-    messaging,
-    fast communication,
-    easy-to-use interface,
-    connecting friends and family,
-    and connecting people across the world.
+    test.
 
 \begin{description}
-    \item[\textbf{USER-06}]
-        The user needs to conduct voice calls with one or more people, fast
-            enough to have a conversation in real time.
-    \item[\textbf{USER-07}]
-        The user needs to conduct video calls with one or more people, fast
-            enough to have a conversation in real time.
-    \item[\textbf{USER-08}]
-        Under a strong network connection, the user needs to be able to send and
-            receive messages from one or more people in less than one minute.
-    \item[\textbf{USER-09}]
-        The user should not need to pay for the app when used for its basic
-            functionalities of calling, messaging, and sharing content.
-    \item[\textbf{USER-10}]
-        The user should not be distracted by advertisements when using the app.
-    \item[\textbf{USER-11}]
-        The user needs to be able to connect with support personnel if they are
-            having problems with the app that they cannot fix.
+    \item[\textbf{USER-\showmycounter}]
+        test
 \end{description}
