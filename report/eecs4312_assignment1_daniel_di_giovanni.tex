@@ -38,7 +38,8 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
-    citecolor=black
+    citecolor=black,
+    linkcolor=black
 }
 
 % Referencing sections and include their name in the reference
@@ -68,6 +69,60 @@
 % User requirement counter
 \newcounter{mycounter}
 \newcommand\showmycounter{\addtocounter{mycounter}{1}\ifnum\value{mycounter}<10 0\fi\themycounter}
+
+% USER REQUIREMENT COUNTERS
+% =========================
+
+% User network requirement counter
+\newcounter{usernetcounter}
+\newcommand\showusernetcounter{\addtocounter{usernetcounter}{1}USER-NET-\ifnum\value{usernetcounter}<10 0\fi\theusernetcounter}
+
+% User support requirement counter
+\newcounter{userhelpcounter}
+\newcommand\showuserhelpcounter{\addtocounter{userhelpcounter}{1}USER-HELP-\ifnum\value{userhelpcounter}<10 0\fi\theuserhelpcounter}
+
+% User calling requirement counter
+\newcounter{usercallcounter}
+\newcommand\showusercallcounter{\addtocounter{usercallcounter}{1}USER-CALL-\ifnum\value{usercallcounter}<10 0\fi\theusercallcounter}
+
+% User posting requirement counter
+\newcounter{userpostcounter}
+\newcommand\showuserpostcounter{\addtocounter{userpostcounter}{1}USER-POST-\ifnum\value{userpostcounter}<10 0\fi\theuserpostcounter}
+
+% User games requirement counter
+\newcounter{usergamecounter}
+\newcommand\showusergamecounter{\addtocounter{usergamecounter}{1}USER-GAME-\ifnum\value{usergamecounter}<10 0\fi\theusergamecounter}
+
+% User UI requirement counter
+\newcounter{useruicounter}
+\newcommand\showuseruicounter{\addtocounter{useruicounter}{1}USER-UI-\ifnum\value{useruicounter}<10 0\fi\theuseruicounter}
+
+% FUNCTIONAL REQUIREMENT COUNTERS
+% ===============================
+
+% Functional network requirement counter
+\newcounter{funcnetcounter}
+\newcommand\showfuncnetcounter{\addtocounter{funcnetcounter}{1}FUNC-NET-\ifnum\value{funcnetcounter}<10 0\fi\thefuncnetcounter}
+
+% Functional support requirement counter
+\newcounter{funchelpcounter}
+\newcommand\showfunchelpcounter{\addtocounter{funchelpcounter}{1}FUNC-HELP-\ifnum\value{funchelpcounter}<10 0\fi\thefunchelpcounter}
+
+% Functional calling requirement counter
+\newcounter{funccallcounter}
+\newcommand\showfunccallcounter{\addtocounter{funccallcounter}{1}FUNC-CALL-\ifnum\value{funccallcounter}<10 0\fi\thefunccallcounter}
+
+% Functional posting requirement counter
+\newcounter{funcpostcounter}
+\newcommand\showfuncpostcounter{\addtocounter{funcpostcounter}{1}FUNC-POST-\ifnum\value{funcpostcounter}<10 0\fi\thefuncpostcounter}
+
+% Functional games requirement counter
+\newcounter{funcgamecounter}
+\newcommand\showfuncgamecounter{\addtocounter{funcgamecounter}{1}FUNC-GAME-\ifnum\value{funcgamecounter}<10 0\fi\thefuncgamecounter}
+
+% Functional UI requirement counter
+\newcounter{funcuicounter}
+\newcommand\showfuncuicounter{\addtocounter{funcuicounter}{1}FUNC-UI-\ifnum\value{funcuicounter}<10 0\fi\thefuncuicounter}
 
 \begin{document}
 
