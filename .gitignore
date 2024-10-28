@@ -14,7 +14,7 @@
 !notebooks
 !notebooks/data_preprocessing.ipynb
 !notebooks/topic_modelling.ipynb
-!notebooks/GrandPad Reviews Preprocessing.ipynb
+!notebooks/GrandPad Reviews Analysis.ipynb
 
 # Unignore Python utils
 !notebooks/utils
@@ -29,4 +29,5 @@
 !report/task1.tex
 !report/task2.tex
 !report/references.bib
-!report/GrandPad Reviews Preprocessing.pdf
+!report/GrandPad Reviews Analysis.pdf
+!report/eecs4312_assignment1_daniel_di_giovanni.pdf

@@ -3,11 +3,56 @@
 
 The identification of user, software, and system requirements were scraped and
     analyzed from the Google Play Store, both from the app's description and its
-    reviews.
+    reviews, and from \href{https://www.grandpad.net/}{GrandPad's website}.
+
+\section*{Analyzing GrandPad's Google Play Description and Website}
+\addcontentsline{toc}{section}{Analyzing GrandPad's Google Play Description and Website}
+
+First, analysis was conducted on the description of the GrandPad app on the
+    Google Play Store and from their website.
+
+\subsection*{User Requirements from GrandPad's Description and Website}
+\addcontentsline{toc}{subsection}{User Requirements from GrandPad's Description and Website}
+
+The following user requirements were created from analyzing GrandPad's goals and
+    desired outcomes for families.
+The Google Play Store description contains many needs that GrandPad claims to
+    satisfy \cite{grandpad_google_play}, and the GrandPad website lists
+    product details that fill gaps for its users \cite{grandpad_product_details}.
+
+\begin{description}
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a group of family members and friends with elderly
+            members, I want to be able to make a private social network for us
+            to stay connected.
+    \item[\textbf{USER-\showmycounter}]
+        As an elderly member of a group of family members and friends, I want to
+            have a private network to keep us connected without the distractions
+            and complexity of modern social media.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to make video and voice
+            calls to intimately connect with my loved ones.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to share photos and
+            videos to stay in touch with my family members and friends.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to comment and react to
+            posts from my family and friends to stay engaged with them and their
+            lives.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to play online games
+            with my elderly loved one to connect with them and keep them engaged
+            cognitively.
+    \item[\textbf{USER-\showmycounter}]
+        As a caregiver for an elderly family member, I want to be able to
+            remotely configure and administer their GrandPad tablet to help them
+            with problems they are having with it.
+\end{description}
 
 \section*{Analyzing GrandPad's Google Play Reviews}
 \addcontentsline{toc}{section}{Analyzing GrandPad's Google Play Reviews}
 
+Next, the reviews from the GrandPad Google Play Store app were analyzed.
 The following explanation of the analysis of GrandPad's reviews is a summary of
     the Jupyter Notebook in Appendix \ref{sec:reviews_processing_notebook}.
 
@@ -82,27 +127,74 @@ When analyzing the mixed reviews, some recurring topics were
     being part of multiple networks,
     editing posts and comments,
     vague error messages,
-    posting multiple files at once,
+    posting/downloading multiple files at once,
     and sending message to or calling specific people in a network.
 
 \begin{description}
     \item[\textbf{USER-\showmycounter}]
         As an administrator of a GrandPad family network, I need to be able to
-            add multiple users with GrandPad tablets to a single member, to
+            add multiple users with GrandPad tablets to a single network, to
             accommodate multiple elderly family members.
     \item[\textbf{USER-\showmycounter}]
         As a user of the GrandPad app, I want to be able to easily join and
-            switch between multiple GrandPad family networks to be part of
-            multiple groups of people.
+            switch between multiple GrandPad family networks because I am part
+            of multiple social circles with elderly people.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to be able to edit the posts and
+            comments that I make in case I wrote a typo.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to know the reason when an upload
+            fails so that I can take action to fix it.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to post multiple files at once
+            because I have many pictures and videos from a single event that I
+            want to share.
+    \item[\textbf{USER-\showmycounter}]
+        As a user of the GrandPad app, I want to download the files that my
+            family members and friends share to have them saved on my device.
+    \item[\textbf{USER-\showmycounter}]
+        As a caregiver of an elderly family member, I want to send messages to
+            or call the elderly member specifically so that I can check up on
+            them.
 \end{description}
 
 \subsection*{User Requirements from Positive Reviews}
 \addcontentsline{toc}{subsection}{User Requirements from Positive Reviews}
 
 When analyzing positive reviews, prominent topics that were found include
-    test.
+    positive customer service experience,
+    ease of use for non-tech savvy users,
+    ability to connect over geographical barriers,
+    privacy,
+    lack of scams and telemarketers,
+    lack of advertisements,
+    and ability to connect multiple generations of users.
 
 \begin{description}
     \item[\textbf{USER-\showmycounter}]
-        test
+        As an elderly user of GrandPad, I need access to customer support that
+            is patient and polite because I have difficulty using technology.
+    \item[\textbf{USER-\showmycounter}]
+        As an elderly user of GrandPad, I need the interface to be simple enough
+            to use with little to no technology experience.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to be able to stay
+            connected with my loved ones even though they live far away or in
+            places I cannot easily get to.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I don't want strangers to be
+            able to join our network.
+    \item[\textbf{USER-\showmycounter}]
+        As an administrator of a GrandPad family network, I want to be able to
+            choose who can join the network to keep elderly members safe.
+    \item[\textbf{USER-\showmycounter}]
+        As a caregiver of an elderly family member, I want the peace of mind of
+            knowing that they are safe from scammers on the app.
+    \item[\textbf{USER-\showmycounter}]
+        As a member of a GrandPad family network, I want to use the app to stay
+            connected without being distracted by advertisements.
+    \item[\textbf{USER-\showmycounter}]
+        As a younger member of a GrandPad family network, I want the app to be
+            engaging for me, while being simple enough for non tech-savvy
+            members to use.
 \end{description}
