@@ -5,11 +5,31 @@ The identification of user, software, and system requirements were scraped and
     analyzed from the Google Play Store, both from the app's description and its
     reviews, and from \href{https://www.grandpad.net/}{GrandPad's website}.
 
-\section*{Analyzing GrandPad's Google Play Description and Website}
-\addcontentsline{toc}{section}{Analyzing GrandPad's Google Play Description and Website}
+\section*{User Requirements}
+\addcontentsline{toc}{section}{User Requirements}
 
-First, analysis was conducted on the description of the GrandPad app on the
-    Google Play Store and from their website.
+In total, 31 user requirements were discovered, spanning 6 distinct categories.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Requirement Category} & \textbf{Description}                                   & \textbf{Count} \\ \hline
+    NET  & Requirements related to the creation and administration of private social networks. & 9 \\ \hline
+    HELP                          & Requirements related to user support services.         & 3              \\ \hline
+    CALL                          & Requirements related to video and voice calling.       & 4              \\ \hline
+    UI   & Requirements related to the user interface of the GrandPad app and tablet.          & 8 \\ \hline
+    POST & Requirements related to creating, editing, and commenting on posts in a network.    & 6 \\ \hline
+    GAME                          & Requirements related to online games within a network. & 1              \\ \hline
+    \textbf{Total}                & \cellcolor[HTML]{C0C0C0}                               & \textbf{31}    \\ \hline
+    \end{tabular}%
+    }
+    \end{table}
 
 \subsection*{User Requirements from GrandPad's Description and Website}
 \addcontentsline{toc}{subsection}{User Requirements from GrandPad's Description and Website}
@@ -49,8 +69,8 @@ The Google Play Store description contains many needs that GrandPad claims to
             with problems they are having with it.
 \end{description}
 
-\section*{Analyzing GrandPad's Google Play Reviews}
-\addcontentsline{toc}{section}{Analyzing GrandPad's Google Play Reviews}
+\subsection*{Analyzing GrandPad's Google Play Reviews}
+\addcontentsline{toc}{subsection}{Analyzing GrandPad's Google Play Reviews}
 
 Next, the reviews from the GrandPad Google Play Store app were analyzed.
 The following explanation of the analysis of GrandPad's reviews is a summary of
@@ -74,8 +94,8 @@ The reviews were then split by their rating (5 stars: positive, 2-4 stars:
         {Latent Dirichlet Allocation (LDA) algorithm from Scikit Learn}
     to identify important topics from each category of the reviews.
 
-\subsection*{User Requirements from Negative Reviews}
-\addcontentsline{toc}{subsection}{User Requirements from Negative Reviews}
+\subsubsection*{User Requirements from Negative Reviews}
+\addcontentsline{toc}{subsubsection}{User Requirements from Negative Reviews}
 
 The analysis of negative reviews led to some recurring topics, which included
     lack of professional support,
@@ -119,8 +139,8 @@ The analysis of negative reviews led to some recurring topics, which included
             one.
 \end{description}
 
-\subsection*{User Requirements from Mixed Reviews}
-\addcontentsline{toc}{subsection}{User Requirements from Mixed Reviews}
+\subsubsection*{User Requirements from Mixed Reviews}
+\addcontentsline{toc}{subsubsection}{User Requirements from Mixed Reviews}
 
 When analyzing the mixed reviews, some recurring topics were
     connecting multiple GrandPad tablets to a single network,
@@ -158,8 +178,8 @@ When analyzing the mixed reviews, some recurring topics were
             them.
 \end{description}
 
-\subsection*{User Requirements from Positive Reviews}
-\addcontentsline{toc}{subsection}{User Requirements from Positive Reviews}
+\subsubsection*{User Requirements from Positive Reviews}
+\addcontentsline{toc}{subsubsection}{User Requirements from Positive Reviews}
 
 When analyzing positive reviews, prominent topics that were found include
     positive customer service experience,
