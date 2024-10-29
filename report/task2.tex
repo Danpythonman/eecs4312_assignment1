@@ -219,6 +219,8 @@ When analyzing positive reviews, prominent topics that were found include
             members to use.
 \end{description}
 
+\pagebreak
+
 \section*{Functional Requirements}
 \addcontentsline{toc}{section}{Functional Requirements}
 
@@ -357,3 +359,81 @@ Going forward, ``the system'' will be used to refer to the GrandPad platform,
             accommodate users with varying comfort levels with technology and
             online games.
 \end{description}
+
+\pagebreak
+
+\section*{Comparison of User Requirements and Functional Requirements}
+\addcontentsline{toc}{section}{Comparison of User Requirements and Functional Requirements}
+
+Many of the user requirements translated directly into functional requirements.
+The user requirements expressed a need that a user (or a specific group of
+    users) should have satisfied by the system.
+The requirements were worded like ``As a user, I need ... because ...'',
+    expressing that the user has a certain goal for a certain reason.
+User requirements are written from the perspective of the user, and as a result
+    there is no restriction on what the user will do.
+Unlike the system, the user is not what we control.
+Instead, the user is a stakeholder whose needs must be met.
+
+The functional requirements were primarily adapted from the user requirements.
+Since the functional requirements describe the system, which is under the
+    control of the developers, the requirements are written like ``The system
+    shall ...'' to express the specific behaviors the system must exhibit.
+By analyzing a group of user requirements and asking what the system needs to do
+    to satisfy them, functional requirements are discovered.
+All the functional requirements are testable, in that the system's performance
+    can be measured and checked against the requirements, and a clear pass or
+    fail will result.
+
+\pagebreak
+
+\section*{Impact of Domain Requirements on the Software Requirements}
+\addcontentsline{toc}{section}{Impact of Domain Requirements on the Software Requirements}
+
+The domain requirements for GrandPad primarily result from two areas:
+    elderly care
+    and telecommunications.
+
+\subsection*{Domain Requirements for Elderly Care}
+\addcontentsline{toc}{subsection}{Domain Requirements for Elderly Care}
+
+\begin{description}
+    \item[DOM-ELDER-01]
+        Senior technology users need protection, or education, from online scams
+            and exploitations.
+    \item[DOM-ELDER-02]
+        The technology used by seniors should have the ability to configure
+            their UI to accommodate users with differing levels of comfort with
+            technology use.
+\end{description}
+
+These requirements influenced the functional requirements regarding the
+    administration of private social networks (\textbf{FUNC-NET}) and support
+    staff (\textbf{FUNC-HELP}).
+The functional requirements effectively delegate the responsibility of scam
+    protection and UI configuration to the family members that take an
+    administrative role, along with trusted support staff to help if needed.
+Functional requirements \textbf{FUNC-UI-01} and \textbf{FUNC-UI-05} are also
+    impacted by these domain requirements, as they involve the ease of use of
+    the UI for users of all levels of technology experience.
+
+\subsection*{Domain Requirements for Telecommunications}
+\addcontentsline{toc}{subsection}{Domain Requirements for Telecommunications}
+
+\begin{description}
+    \item[DOM-TELE-01]
+        High definition 720p resolution video calling requires a data rate of at
+            least 1.2Mbps \cite{zoom_system_requirements}.
+    \item[DOM-TELE-02]
+        High quality video calling requires a data rate of at least 600kbps
+            \cite{zoom_system_requirements}.
+    \item[DOM-TELE-03]
+        Voice calling requires a data rate of at least 100kbps
+            \cite{zoom_system_requirements}.
+\end{description}
+
+These requirements influenced the functional requirements related to video and
+    voice calling (\textbf{FUNC-CALL}).
+Since these set limits for the ability to maintain a call with one or more
+    people, the functionality that GrandPad must exhibit will depend on these
+    limits.
