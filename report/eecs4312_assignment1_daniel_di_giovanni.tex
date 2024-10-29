@@ -65,6 +65,8 @@
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \makeatother
 
+\usepackage{tabularray}
+
 % User requirement counter
 \newcounter{mycounter}
 \newcommand\showmycounter{\addtocounter{mycounter}{1}\ifnum\value{mycounter}<10 0\fi\themycounter}
@@ -186,6 +188,8 @@
 
     \include{task2}
 
+    \include{task3}
+
     \fancyhead{}
 
     \part*{References}
@@ -204,8 +208,8 @@
             The following appendices contain the code that was referenced
                 throughout this report.
             Appendix \ref{sec:reviews_processing_notebook} contains the Jupyter
-                Notebook for the data preprocessing of the WhatsApp Messenger
-                reviews.
+                Notebook for the review processing for the GrandPad app on the
+                Google Play Store.
 
             \includepdf[
                 pages=-,
